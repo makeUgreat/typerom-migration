@@ -16,6 +16,6 @@ export const typeormConfig: TypeOrmModuleOptions = {
   database: 'test',
   entities: [PostModel],
   migrationsTableName: 'migrations',
-  migrations: [__dirname + '/../src/db/migrations/*{.ts,.js}'],
+  migrations: [__dirname + '/../db/migrations/*{.ts,.js}'], // migration:run 하면 실행될 마이그레이션 파일들 위치
   synchronize: false,
 };
