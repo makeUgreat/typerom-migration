@@ -6,9 +6,6 @@ export class PostModel {
   id: number;
 
   @Column()
-  title: string;
-
-  @Column()
   text: string;
 
   @Column({ nullable: true })
