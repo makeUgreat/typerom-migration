@@ -1,8 +1,8 @@
 import { setSeederFactory } from 'typeorm-extension';
-import { Post } from '../posts/entities/posts.entity';
+import { PostModel } from '../../posts/entities/posts.entity';
 
-export default setSeederFactory(Post, (faker) => {
-  const post = new Post();
+export default setSeederFactory(PostModel, (faker) => {
+  const post = new PostModel();
   post.title = faker.lorem.sentence();
   post.text = faker.lorem.paragraphs(3);
   return post;

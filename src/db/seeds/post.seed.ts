@@ -1,11 +1,11 @@
 import { Seeder } from 'typeorm-extension';
 import { DataSource } from 'typeorm';
-import { Post } from '../posts/entities/posts.entity';
+import { PostModel } from '../../posts/entities/posts.entity';
 import { faker } from '@faker-js/faker';
 
 export default class PostSeeder implements Seeder {
   async run(dataSource: DataSource): Promise<void> {
-    const repository = dataSource.getRepository(Post);
+    const repository = dataSource.getRepository(PostModel);
     const posts = Array.from({ length: 500 }).map(() =>
       repository.create({
         title: faker.lorem.sentence(),
