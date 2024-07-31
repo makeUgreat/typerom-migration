@@ -15,7 +15,7 @@ export const typeormConfig: TypeOrmModuleOptions = {
   password: '1234',
   database: 'test',
   entities: [PostModel],
-  migrationsTableName: 'typeorm_migrations',
-  migrations: [__dirname + '/../src/migrations/*{.ts,.js}'],
-  synchronize: true,
+  migrationsTableName: 'migrations',
+  migrations: [__dirname + '/../src/db/migrations/*{.ts,.js}'],
+  synchronize: false,
 };

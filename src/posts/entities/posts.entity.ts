@@ -10,4 +10,7 @@ export class PostModel {
 
   @Column()
   text: string;
+
+  @Column({ nullable: true })
+  author: string;
 }
