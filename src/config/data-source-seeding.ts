@@ -8,8 +8,8 @@ import { typeormConfig } from './typeorm-config';
  */
 const options: DataSourceOptions & SeederOptions = {
   ...(typeormConfig as any),
-  seeds: ['src/seeds/**/*{.ts,.js}'],
-  factories: ['src/factories/**/*{.ts,.js}'],
+  seeds: ['src/db/seeds/**/*{.ts,.js}'],
+  factories: ['src/db/factories/**/*{.ts,.js}'],
 };
 
 export const dataSource = new DataSource(options);

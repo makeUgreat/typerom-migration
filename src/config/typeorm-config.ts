@@ -17,5 +17,5 @@ export const typeormConfig: TypeOrmModuleOptions = {
   entities: [PostModel],
   migrationsTableName: 'typeorm_migrations',
   migrations: [__dirname + '/../src/migrations/*{.ts,.js}'],
-  synchronize: false,
+  synchronize: true,
 };
